@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/jquery.bxslider/jquery.bxslider.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/owl.carousel/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/jquery-ui/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/fancyBox/source/jquery.fancybox.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/green.css"/>
+    <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style_frm_dkdn.css"/>
+    <link rel="stylesheet" href="css/switcher.css">
+    <title>UberChef Shop</title>
+</head>
+<body class="green">
+<!-- HEADER -->
+<div id="header" class="header">
+
+    <!-- MAIN HEADER -->
+    <div class="container main-header">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 logo">
+                <a href="/"><img src="./images/logochef.png" class="LogoChef"></a>
+            </div>
+            <div class="col-xs-4 col-sm-12 col-md-5 col-lg-4 header-search-box">
+                <form class="form-inline">
+                    <div class="form-group input-serach">
+                        <input type="text" id="searchInput" placeholder="Search ...">
+                    </div>
+                    <button type="submit" class="pull-right btn-search"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 group-button-header">
+                <a title="Compare" class="btn-compare">Compare</a>
+                <a title="My wishlist" class="btn-heart">Heart</a>
+
+                <div class="btn-cart" id="cart-block">
+                    <a title="SignIn" href="" data-toggle="modal" data-target="#myModal">Log In</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MANIN HEADER -->
+    <div id="nav-top-menu" class="nav-top-menu">
+        <div class="container">
+            <div class="row">
+
+                <div id="main-menu" class="col-sm-12 main-menu">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                        data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                                <a class="navbar-brand">MENU</a>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="/"><span class="fa fa-home"></span>Home</a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle"
+                                           data-toggle="dropdown"> Product</a>
+                                        <ul class="dropdown-menu container-fluid">
+                                            <li class="block-container">
+                                                <ul class="block">
+                                                    <li class="link_container"><a href="/product-drinks">Drinks</a></li>
+                                                    <li class="link_container"><a href="/product-breads">Breads</a></li>
+                                                    <li class="link_container"><a href="/product-fruits">Fruits</a></li>
+                                                    <li class="link_container"><a href="/product-meat">Meat</a></li>
+                                                    <li class="link_container"><a href="/product-chicken">Chicken</a></li>
+                                                    <li class="link_container"><a href="/product-seafood">SeaFood</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!--<li><a>Promotion</a></li>-->
+                                    <li><a href="/news">News</a></li>
+                                    <li><a href="/policy-faq">Policy & FAQ</a></li>
+                                    <li><a href="/about-us">About Us</a></li>
+                                    <li><a href="/contact-us">Contact</a></li>
+                                </ul>
+                            </div><!--/.nav-collapse -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- userinfo on top-->
+            <div id="form-search-opntop">
+            </div>
+            <!-- userinfo on top-->
+            <div id="user-info-opntop">
+            </div>
+            <!-- CART ICON ON MMENU -->
+            <div id="shopping-cart-box-ontop">
+                <i class="fa fa-user" data-toggle="modal" data-target="#myModal"></i>
+
+                <div class="shopping-cart-box-ontop-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end header -->
+
+<!-- Home slideder-->
+<div id="home-slider">
+    <div class="container-fuild" style="width: 100%;">
+        <div class="row">
+            <div class="col-sm-12 header-top-right">
+                <div class="homeslider">
+                    <ul id="contenhomeslider">
+                        <li><img alt="Funky roots" src="images/slide/slider6.jpg" title="Funky roots"/>
+                            <div class="carousel-caption">
+                                <h1>UberChef</h1>
+                                <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                              </div>
+                        </li>
+                        <li><img alt="Funky roots" src="images/slide/slider2.jpg" title="Funky roots"/>
+                            <div class="carousel-caption">
+                                <h1>UberChef</h1>
+                                <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                              </div>
+                        </li>
+                        <li><img alt="Funky roots" src="images/slide/slider3.jpg" title="Funky roots"/>
+                            <div class="carousel-caption">
+                                <h1>UberChef</h1>
+                                <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                              </div>
+                        </li>
+                        <li><img alt="Funky roots" src="images/slide/comment.jpg" title="Funky roots"/>
+                            <div class="carousel-caption">
+                                <h1>UberChef</h1>
+                                <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                              </div>
+                        </li>
+                        <li><img alt="Funky roots" src="images/slide/foot.jpg" title="Funky roots"/>
+                            <div class="carousel-caption">
+                                <h1>UberChef</h1>
+                                <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                              </div>
+                        </li>
+                        <li><img alt="Funky roots" src="images/slide/slider5.jpg" title="Funky roots"/>
+                            <div class="carousel-caption">
+                                <h1>UberChef</h1>
+                                <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                              </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Home slideder-->
+<div class="page-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <h2 class="page-heading">
+                    <span class="page-heading-title"><img alt="fashion" src="images/icons8-three.png"/> PROMOTION</span>
+                </h2>
+
+                <div class="latest-deals-product">
+                    <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav="true"
+                        data-margin="10" data-autoplayTimeout="1000" data-autoplayHoverPause="true"
+                        data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":5}}'>
+                        <li>
+
+                            <div class="left-block">
+                                <a><img class="img-responsive" alt="product"
+                                                 src="images/product-detail/promotion_home/p1.jpg"/></a>
+
+                                <div class="quick-view">
+                                    <a title="Add to my wishlist" class="heart"></a>
+                                    <a title="Add to compare" class="compare"></a>
+                                    <a title="Quick view" href="images/product-detail/promotion_home/p1_zoom.jpg" class="search fancybox-button"></a>
+                                </div>
+                                <div class="add-to-cart">
+                                    <a class="add-item-to-cart" title="Add to Carr" data-name="Oysters"
+                                       data-price="38500" data-image="promotion_home/p1.jpg" data-product-code="AS109">Add to Cart</a>
+                                </div>
+                                <div class="price-percent-reduction2">
+                                    -30% OFF
+                                </div>
+                            </div>
+                            <div class="right-block">
+                                <h5 class="product-name"><a href="oysters-detail">Oysters</a></h5>
+
+                                <div class="content_price">
+                                    <span class="price product-price">
+                                        <span style="color: orangered">Best Price:</span> 38,500đ</span>
+                                    <br><span style="color: black">Price:</span>
+                                    <span class="price old-price">55,000đ</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-block">
+                                <a ><img class="img-responsive" alt="product"
+                                                 src="images/product-detail/promotion_home/p2.jpg"/></a>
+
+                                <div class="quick-view">
+                                    <a title="Add to my wishlist" class="heart"></a>
+                                    <a title="Add to compare" class="compare"></a>
+                                    <a title="Quick view" href="images/product-detail/promotion_home/p2_zoom.jpg" class="search fancybox-button"></a>
+
+                                </div>
+                                <div class="add-to-cart">
+                                    <a class="add-item-to-cart" title="Add to Cart" data-name="Fried shrimp"
+                                       data-price="21000" data-image="promotion_home/p2.jpg" data-product-code="BL237">Add to Cart</a>
+                                </div>
+                                <div class="price-percent-reduction2">
+                                    -30% OFF
+                                </div>
+                            </div>
+                            <div class="right-block">
+                                <h5 class="product-name"><a href="fried-detail">Fried shrimp</a></h5>
+
+                                <div class="content_price">
+                                    <span class="price product-price"><span
+                                            style="color: orangered">Best Price:</span> 21,000đ</span>
+                                    <br><span style="color: black">Price:</span>
+                                    <span class="price old-price">30,000đ</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-block">
+                                <a><img class="img-responsive" alt="product"
+                                                 src="images/product-detail/promotion_home/p5.jpg"/></a>
+
+                                <div class="quick-view">
+                                    <a title="Add to my wishlist" class="heart"></a>
+                                    <a title="Add to compare" class="compare"></a>
+                                    <a title="Quick view" href="images/product-detail/promotion_home/p5_zoom.jpg" class="search fancybox-button"></a>
+                                </div>
+                                <div class="add-to-cart">
+                                    <a class="add-item-to-cart" title="Add to Cart" data-name="Steamed Egg"
+                                       data-price="10500" data-image="promotion_home/p5" data-product-code="PP987">Add to Cart</a>
+                                </div>
+                                <div class="price-percent-reduction2">
+                                    -30% OFF
+                                </div>
+                            </div>
+                            <div class="right-block">
+                                <h5 class="product-name"><a href="egg-detail">Steamed Egg</a></h5>
+
+                                <div class="content_price">
+                                    <span class="price product-price"><span
+                                            style="color: orangered">Best Price:</span> 10,500đ</span>
+                                    <br><span style="color: black">Price:</span>
+                                    <span class="price old-price">15,000đ</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-block">
+                                <a><img class="img-responsive" alt="product"
+                                                 src="images/product-detail/promotion_home/p6.jpg"/></a>
+
+                                <div class="quick-view">
+                                    <a title="Add to my wishlist" class="heart"></a>
+                                    <a title="Add to compare" class="compare"></a> 
+                                    <a title="Quick view" href="images/product-detail/promotion_home/p6_zoom.jpg" class="search fancybox-button"></a>
+                                </div>
+                                <div class="add-to-cart">
+                                    <a class="add-item-to-cart" title="Add to Cart" data-name="Sausage Egg"
+                                       data-price="31500" data-image="promotion_home/p6.jpg" data-product-code="BB0927">Add to Cart</a>
+                                </div>
+                                <div class="price-percent-reduction2">
+                                    -30% OFF
+                                </div>
+                            </div>
+                            <div class="right-block">
+                                <h5 class="product-name"><a href="sausage_egg-detail">Sausage Egg</a></h5>
+
+                                <div class="content_price">
+                                    <span class="price product-price"><span
+                                            style="color: orangered">Best Price:</span> 31,500đ</span>
+                                    <br><span style="color: black">Price:</span>
+                                    <span class="price old-price">45,000đ</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-block">
+                                <a><img class="img-responsive" alt="product"
+                                                 src="images/product-detail/promotion_home/p8.jpg"/></a>
+
+                                <div class="quick-view">
+                                    <a title="Add to my wishlist" class="heart"></a>
+                                    <a title="Add to compare" class="compare"></a>
+                                    <a title="Quick view" href="images/product-detail/promotion_home/p8_zoom.jpg" class="search fancybox-button"></a>
+                                </div>
+                                <div class="add-to-cart">
+                                    <a class="add-item-to-cart" title="Add to Cart" data-name="Milk coffee"
+                                       data-price="199500" data-image="promotion_home/p8.jpg" data-product-code="WN982">Add to Cart</a>
+                                </div>
+                                <div class="price-percent-reduction2">
+                                    -30% OFF
+                                </div>
+                            </div>
+                            <div class="right-block">
+                                <h5 class="product-name"><a href="coffee-detail">Milk Coffee</a></h5>
+
+                                <div class="content_price">
+                                    <span class="price product-price"><span
+                                            style="color: orangered">Best Price:</span> 199,500đ</span>
+                                    <br><span style="color: black">Price:</span>
+                                    <span class="price old-price">285,000đ</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-block">
+                                <a><img class="img-responsive" alt="product"
+                                                 src="images/product-detail/promotion_home/p3.jpg"/></a>
+
+                                <div class="quick-view">
+                                    <a title="Add to my wishlist" class="heart"></a>
+                                    <a title="Add to compare" class="compare"></a>
+                                    <a title="Quick view" href="images/product-detail/promotion_home/p3_zoom.jpg" class="search fancybox-button"></a>
+                                </div>
+                                <div class="add-to-cart">
+                                    <a class="add-item-to-cart" title="Add to Cart" data-name="Fried chicken"
+                                       data-price="70000" data-image="promotion_home/p3.jpg" data-product-code="CL982">Add to Cart</a>
+                                </div>
+                                <div class="price-percent-reduction2">
+                                    -30% OFF
+                                </div>
+                            </div>
+                            <div class="right-block">
+                                <h5 class="product-name"><a href="fried chicken-detail">Fried chicken</a></h5>
+
+                                <div class="content_price">
+                                    <span class="price product-price"><span
+                                            style="color: orangered">Best Price:</span> 70,000đ</span>
+                                    <br><span style="color: black">Price:</span>
+                                    <span class="price old-price">100,000đ</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<div class="demo_changer" id="demo_changer">
+    <div class="demo-icon fa fa-shopping-cart">
+        <span class="notify notify-left" id="count-cart">2</span>
+    </div>
+    <div class="form_holder">
+        <div class="cart-block">
+            <div class="cart-block-content">
+                <div class="cart-block-list">
+                    <div class="shop_cart">
+                        <table class="shop_table">
+                            <tbody id="show-cart">
+                            <!--/////////////////////////////////-->
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="toal-cart">
+                    <span>Total</span>
+                    <span class="toal-price pull-right" id="total_price">54,000đ</span>
+                </div>
+                <div class="cart-buttons">
+                    <a href="/payment" class="btn-check-out">Payment</a>
+                </div>
+            </div>
+        </div>
+       </div>
+</div>
+<!----> 
+<div class="content-page">
+    <div class="container">
+        <!-- featured category  -->
+        <div class="category-featured Vegetables">
+            <nav class="navbar nav-menu show-brand">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-brand"><a> <img alt="fashion" src="images/icon_like.png"/> Best Seller</a></div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse">
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+
+            </nav>
+        <div class="product-featured clearfix">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="box-right">
+                            <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                            <ul class="product-list">
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                         src="images/product-detail/food_home/1.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/1_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Cart" data-name="Fried onion chili"
+                                               data-price="55000" data-image="food_home/1.jpg" data-product-code="SP109">Add to Cart</a>
+                                        </div>
+                                        <div class="bestseller"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Fried onion chili</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 55,000đ</span>
+                                            </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/10.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/10_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Cart" data-name="Hamburger"
+                                               data-price="52000" data-image="food_home/10.jpg" data-product-code="AC042">Add to Cart</a>
+                                        </div>
+                                        <div class="bestseller"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Hamburger</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 52,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/3.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/3_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Cart" data-name="Cheese Hamburger"
+                                               data-price="25000" data-image="food_home/3.jpg" data-product-code="WR109">Add to Cart</a>
+                                        </div>
+                                        <div class="bestseller"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Cheese Hamburger</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 25,000đ</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/4.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/4_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Cart" data-name="Custard cake"
+                                               data-price="60000" data-image="food_home/4.jpg" data-product-code="SBD042">Add to Cart</a>
+                                        </div>
+                                        <div class="bestseller"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Custard cake</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 60,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                         src="images/product-detail/food_home/5.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/5_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Cart" data-name="Ink fever"
+                                               data-price="70000" data-image="food_home/5.jpg" data-product-code="BSD042">Add to Cart</a>
+                                        </div>
+                                        <div class="bestseller"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Ink fever</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 70,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                         src="images/product-detail/food_home/6.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/6_zoom.jpg"class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Cart" data-name="Sauce noodles"
+                                               data-price="126000" data-image="food_home/6.jpg" data-product-code="WR043">Add to Cart</a>
+                                        </div>
+                                        <div class="bestseller"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Sauce noodles</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 126,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                         src="images/product-detail/food_home/7.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/7_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Cart" data-name="French fries"
+                                               data-price="52000" data-image="food_home/7.jpg" data-product-code="CB044">Add to Cart</a>
+                                        </div>
+                                        <div class="bestseller"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>French fries</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 52,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                         src="images/product-detail/food_home/8.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/8_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Cart" data-name="Beef grill"
+                                               data-price="45000" data-image="food_home/8.jpg" data-product-code="SHT045">Add to Cart</a>
+                                        </div>
+                                        <div class="bestseller"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Beef grill</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 45,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                         src="images/product-detail/food_home/9.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/9_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Cart" data-name="Crab soup"
+                                               data-price="255000" data-image="food_home/9.jpg" data-product-code="AM046">Add to Cart</a>
+                                        </div>
+                                        <div class="bestseller"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Crab soup</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 255,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                         src="images/product-detail/food_home/10.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/10_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Cart" data-name="Oats"
+                                               data-price="75000" data-image="cereals/oat_300x300.jpg" data-product-code="CXK047">Add to Cart</a>
+                                        </div>
+                                        <div class="bestseller"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Oats - qkg</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 75,000</span>
+                                        </div>
+                                    </div>
+                                </li> -->
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end featured category -->
+
+
+        <div class="category-featured Vegetables">
+            <nav class="navbar nav-menu show-brand">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-brand"><a> <img alt="fashion" src="images/icon_paper-plane.png"/> Coming Soon </a></div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse">
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+
+            </nav>
+            <div class="product-featured clearfix">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="box-right">
+                            <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                            <ul class="product-list">
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/11.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/11_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Apple</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 85,000đ</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/12.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/12_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Mixed fruit</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 52,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/19.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/19_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Rasted pork meat</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 65,000đ</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/15.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/15_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Lemon ice</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 60,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/16.jpg"></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/16_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Strawberry</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 120,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/17.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/17_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Blueberry</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 126,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/13.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/13_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Rice rolls</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 152,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/14.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/14_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Sandwich</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 75,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/food_home/18.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/food_home/18_zoom.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Roll meat</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 205,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product"
+                                                src="images/product-detail/cereals/rye_300x300.jpg"/></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="images/product-detail/cereals/rye_600x600.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a>Ryes - kg</a></h5>
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 195,000</span>
+                                        </div>
+                                    </div>
+                                </li> -->
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end featured category -->
+    </div>
+</div>
+
+
+<!-- POPUP LOGIN-REGISTER -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel" style="font-weight: bold">LOGIN/REGISTER</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-7" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+                            <li><a href="#Registration" data-toggle="tab">Register</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <!-- LOGIN -->
+                            <div class="tab-pane active" id="Login">
+                                <form action="javascript:void()" name="dangnhap_from" class="form-horizontal"
+                                      id="dangnhap_from" method="post">
+                                    <div class="form-group">
+                                        <label for="email_login" class="col-sm-3 control-label">Email</label>
+
+                                        <div class="col-sm-9">
+                                            <input type="email" class="input form-control" id="email_login"
+                                                   placeholder="Email...."/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass_login" class="col-sm-3 control-label">Password</label>
+
+                                        <div class="col-sm-9">
+                                            <input type="password" class="input form-control" id="pass_login"
+                                                   placeholder="Password...."/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <button class="button" type="submit" id="button-confirm">Login</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- REGISTER -->
+                            <div class="tab-pane fade" id="Registration">
+                                <form class="form-horizontal" name="dangkytk_form" action="#" method="post"
+                                      enctype="multipart/form-data" id="dangkytk_form register">
+                                    <div class="form-group">
+                                        <label for="frm_name" class="col-sm-4 control-label">Full Name</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text" class="input form-control" id="frm_name" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="emailtk" class="col-sm-4 control-label">Email</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="email" class="input form-control" id="emailtk" required/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="pass_tk" class="col-sm-4 control-label">Password</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="password" class="input form-control" id="pass_tk" required/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="repass_tk" class="col-sm-4 control-label">Re-password</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="password" class="input form-control" id="repass_tk" required/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ngaysinh_tk" class="col-sm-4 control-label">Birth day</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="date" class="input form-control" id="ngaysinh_tk" required/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="gender_tk" class="col-sm-4 control-label">Gender</label>
+
+                                        <div class="col-sm-8">
+                                            <select class="input form-control" name="gioitinh" id="gender_tk">
+                                                <option value="" checked>I am...</option>
+                                                <option value="1">Female</option>
+                                                <option value="0">Male</option>
+                                                <option value="0">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="diachi" class="col-sm-4 control-label">Adress</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text" name="diachi" class="input form-control" id="diachi_dk"/>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="dienthoai" class="col-sm-4 control-label">Phone number</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text" name="dienthoai" class="input form-control" id="dienthoai_dk"/>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <button class="button" type="submit">Register</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="OR" class="hidden-xs">OR</div>
+                    </div>
+
+                    <!-- Facebook - Google account -->
+                    <div class="col-md-5">
+                        <div class="row text-center sign-with">
+                            <div class="social-header">Login With</div>
+                            <div class="unit social-column">
+                                <div class="social-inner">
+                                    <div><a href="/signinFacebook"><img src="images/fb-login-button-big.png" alt="login-facebook"></a></div>
+                                    <div><a href=""><img src="images/gg-login-button-big.png" alt="login-google"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--EN LOGIN REGISTER-->
+
+<!--PEOPLE SAY-->
+
+<div id="owl-demo-ppsay">
+    <div class="container">
+        <div class="ppsay-title">CUSTOMER COMMENT</div>
+        <div id="customer-item-carousel" class="carousel slide hidden-sm hidden-xs" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#customer-item-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#customer-item-carousel" data-slide-to="1"></li>
+                <li data-target="#customer-item-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner hidden-sm hidden-xs">
+                <div class="item active">
+                    <div class="ppsaydiv">
+                        <div class="ppsaycontent hidden-xs col-sm-6 col-md-6">
+                            <div class="ppsayavt col-md-3 col-sm-3">
+                                <img src="images/parallax-content2-2.png" alt="Ms. Huong Nguyen">
+                            </div>
+                            <div class="ppsayauthor col-md-9 col-sm-9">
+                                <div class="ppsaycontentcmt">
+                                    <p style="text-align: justify; color: white"><span>“ </span><p style="color: white">I am pleased with product quality and service quality of Eco Shop. Best wishes to your shop. I hope that there are more new best products and your service is always sustainable.</p><span>”</span></p>
+                                </div>
+                                <p><span>Customer:</span> <span class="name">Ms. Huong Nguyen</span></p>
+                            </div>
+                        </div>
+                        <div class="ppsaycontent col-xs-12 col-sm-6 col-md-6">
+                            <div class="ppsayavt col-md-3 col-sm-3">
+                                <img src="images/parallax-content.png" alt="Ms. Linh Pham">
+                            </div>
+                            <div class="ppsayauthor col-md-9 col-sm-9">
+                                <div class="ppsaycontentcmt">
+                                    <p style="text-align: justify; color:white"><span>“ </span><p style="color: white">I am so busy that I do not have any time to go suppermarket. So that, buying food online is my best choice. Your products are always fresh and delicious. I will continue buying foods at your online shop. </p><span>”</span></p>
+                                </div>
+                                <p><span>Customer:</span> <span class="name">Ms. Linh Pham</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ppsaydiv">
+                        <div class="ppsaycontent col-xs-12 col-sm-6 col-md-6">
+                            <div class="ppsayavt col-md-3 col-sm-3">
+                                <img src="images/parallax-content2-2.png" alt="Ms. Hoang Tran">
+                            </div>
+                            <div class="ppsayauthor col-md-9 col-sm-9">
+                                <div class="ppsaycontentcmt">
+                                    <p style="text-align: justify; color:white"><span>“ </span> <p style="color: white"> I higly appreciate your product quality and your service. I now truly believe in your brand.</p> <span>”</span></p>
+                                </div>
+                                <p><span>Customer:</span> <span class="name">Ms. Hoang Tran</span></p>
+                            </div>
+                        </div>
+                        <div class="ppsaycontent col-xs-12 col-sm-6 col-md-6">
+                            <div class="ppsayavt col-md-3 col-sm-3">
+                                <img src="images/parallax-content.png" alt="Ms. Thu Phan">
+                            </div>
+                            <div class="ppsayauthor col-md-9 col-sm-9">
+                                <div class="ppsaycontentcmt">
+                                    <p><span style="text-align: justify; color:white">“ </span><p style="color:white">I am a young mom and have to work. It costs my time and money to access your website and buy products. </p> <span>”</span></p>
+                                </div>
+                                <p><span>Customer:</span> <span class="name">Ms.Thu Phan</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ppsaydiv">
+                        <div class="ppsaycontent col-xs-12 col-sm-6 col-md-6">
+                            <div class="ppsayavt col-md-3 col-sm-3">
+                                <img src="images/parallax-content-2.png" alt="Ms. Hoang Tran">
+                            </div>
+                            <div class="ppsayauthor col-md-9 col-sm-9">
+                                <div class="ppsaycontentcmt">
+                                    <p style="text-align: justify; color: white"><span>“ </span><p style="color: white">When I looked for natural and organic shop, my friends introduced your shop to me. At the first time I came your shop, I am so satisfactory because of your customer care.</p><span>”</span></p>
+                                </div>
+                                <p><span>Customer:</span> <span class="name">Ms. Lan Tran</span></p>
+                            </div>
+                        </div>
+                        <div class="ppsaycontent col-xs-12 col-sm-6 col-md-6">
+                            <div class="ppsayavt col-md-3 col-sm-3">
+                                <img src="images/parallax-content-1.png" alt="Ms. Trang Le">
+                            </div>
+                            <div class="ppsayauthor col-md-9 col-sm-9">
+                                <div class="ppsaycontentcmt">
+                                    <p style="text-align: justify; color:white"><span>“ </span><p style="color: white">Your staff are so friendly and enthusiastic. Your shop is also clean and nice. Of course, your products are best quality.</p><span>”</span></p>
+                                </div>
+                                <p><span>Customer:</span> <span class="name">Trang Le</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="customer-item-carousel" class="carousel slide hidden-md hidden-lg" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#customer-item-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#customer-item-carousel" data-slide-to="1"></li>
+                <li data-target="#customer-item-carousel" data-slide-to="2"></li>
+                <li data-target="#customer-item-carousel" data-slide-to="3"></li>
+                <li data-target="#customer-item-carousel" data-slide-to="4"></li>
+                <li data-target="#customer-item-carousel" data-slide-to="5"></li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!--END PEOPLE SAY-->
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <!-- introduce-box -->
+        <div id="introduce-box" class="row">
+            <div class="col-md-4">
+                <div id="address-box">
+                    <a><img src="./images/logochef.png" class="LogoFood"/></a>
+                
+
+                    <div id="address-list">
+                        <div class="tit-name">Address:</div>
+                        <div class="tit-contain">88 Le Van Hien street, Ngu Hanh Son District, Danang city, Vietnam.</div>
+                        <div class="tit-name">Phone:</div>
+                        <div class="tit-contain">(+84) 511.3446.295</div>
+                        <div class="tit-name">Email:</div>
+                        <div class="tit-contain">Fastfood@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="introduce-title">CUSTOMER CARE</div>
+                        <ul id="introduce-support" class="introduce-list">
+                            <li> Mon - Fri: 7am to 8pm </li>
+                            <li>Sat & Sun: 7am to 6pm</li>
+                            <li><a href="policy-faq">How to Buy</a></li>
+                            <li><a href="policy-faq">How to Payment</a></li>
+                            <li><a href="policy-faq">FAQ</a></li>
+                            <li><a href="policy-faq">Return & Change Policy</a></li>
+                            <li><a href="policy-faq">Terms & Conditions</a></li>
+                    </div>
+                
+            
+                    <div class="col-sm-6">
+                        <div class="introduce-title">Policy</div>
+                        <ul id="introduce-Account" class="introduce-list">
+                            <li><a href="policy-faq">Security Policy</a></li>
+                            <li><a href="policy-faq">Payment Policy</a></li>
+                            <li><a href="policy-faq">Return & Change Policy</a></li>
+                            <li><a href="policy-faq">Terms & Conditions</a></li>
+                            <li><a href="policy-faq">Return & Change Policy</a></li>
+                            <li><a href="policy-faq">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-md-3">
+                <div id="contact-box">
+                    <div class="introduce-title">Subscribe to UberChef Shop newsletter</div>
+                    <form action="/sendmail" method="post" accept-charset="utf-8" class="input-group" id="mail-box">
+                        <input type="text" name="email" placeholder="Your email address"/>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">OK</button>
+                          </span>
+                    </form><!-- /input-group -->
+                    <div class="introduce-title">Follow Us</div>
+                    <!--<div class="social-link">-->
+                        <!--<a><i class="fa fa-facebook"></i></a>-->
+                        <!--<a><i class="fa fa-pinterest-p"></i></a>-->
+                        <!--<a><i class="fa fa-google-plus"></i></a>-->
+                        <!--<a><i class="fa fa-youtube"></i></a>-->
+                    <!--</div>-->
+                    <div class="social-link">
+                        <ul class="social-icons">
+                            <li><a class="rss" data-original-title="rss"></a></li>
+                            <li><a class="facebook" data-original-title="facebook"></a></li>
+                            <li><a class="twitter" data-original-title="twitter"></a></li>
+                            <li><a class="googleplus" data-original-title="googleplus"></a></li>
+                            <li><a class="linkedin" data-original-title="linkedin"></a></li>
+                            <li><a class="youtube" data-original-title="youtube"></a></li>
+                            <li><a class="vimeo" data-original-title="vimeo"></a></li>
+                            <li><a class="skype" data-original-title="skype"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- /#introduce-box -->
+
+
+        <div id="footer-menu-box">
+            <p class="text-center">Copyrights &#169; 2019 UberChef Shop. All Rights Reserved.</p>
+        </div><!-- /#footer-menu-box -->
+    </div>
+</footer>
+
+<a class="scroll_top" title="Scroll to Top" style="display: inline;">Scroll</a>
+<!-- Script-->
+
+<script type="text/javascript" src="lib/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="lib/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="lib/fancyBox/source/jquery.fancybox.pack.js" ></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/select2/js/select2.min.js"></script>
+<script type="text/javascript" src="lib/jquery.bxslider/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="lib/owl.carousel/owl.carousel.min.js"></script>
+
+
+
+<script type="text/javascript" src="js/jquery.actual.min.js"></script>
+<script type="text/javascript" src="js/theme-script.js"></script>
+<script type="text/javascript" src="js/shoppingCart.js"></script>
+
+<script type="text/javascript" src="js/layout.js"></script>
+<script src="/js/emailUser.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        Layout.init();
+        Layout.initOWL();
+        Layout.initTwitter();
+        Layout.initImageZoom();
+        Layout.initTouchspin();
+        Layout.initUniform();
+        Layout.initSliderRange();
+    });
+</script>
+</body>
+
+</html>
