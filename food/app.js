@@ -7,11 +7,14 @@ var sassMiddleware = require('node-sass-middleware');
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook');
 var session = require("express-session");
+var multer  = require('multer')
 
 var indexRouter = require('./routes/index');
 var paymentRouter = require('./routes/get.payment');
 var checkoutRouter = require('./routes/checkout');
 var emailGuestRouter = require('./routes/post.emailGuest');
+var productRouter = require('./routes/post.product');
+var removeRouter = require('./routes/post.remove');
 var drinksRouter = require('./routes/get.product-drinks');
 var usersRouter = require('./routes/users');
 var newsRouter = require('./routes/get.news');
@@ -22,11 +25,14 @@ var contactRouter = require('./routes/get.contact');
 var paymentbillRouter = require('./routes/get.paymentbill');
 var adminRouter = require('./routes/get.admin');
 var emailRouter = require('./routes/get.email');
+var adminSetRouter = require('./routes/get.adminSet');
 var signinFacebookRouter = require('./routes/signinFacebook');
 
 var infoAPI = require("./routes/apiInfo.js")
 var app = express();
-
+var produceImage = require('./routes/produce.image.js');
+const storage = multer.diskStorage(produceImage)
+const upload = multer( { storage: storage } );
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -80,6 +86,9 @@ app.use('/news', newsRouter);
 app.use('/paymentbill', paymentbillRouter);
 app.use('/removeemail', removeEmailClientRouter);
 app.use('/email-guest', emailRouter);
+app.use('/admin-set', adminSetRouter);
+app.use('/admin-set', productRouter);
+app.use('/remove', removeRouter);
 app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler

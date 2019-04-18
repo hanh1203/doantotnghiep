@@ -180,213 +180,31 @@
                                     <div class="box-right">
                                         <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
                                         <ul class="product-list">
+                                            <%for (var i = 0; i < result.length; i++) {%>
+                                                <li class="col-sm-4 product-item" style="width: 280px;">
+                                                    <div class="left-block">
+                                                        <a><img class="img-responsive" alt="product"
+                                                                src="<%-result[i].image%>"/></a>
 
-                                            <li class="col-sm-4 product-item" style="width: 280px;">
-                                                <div class="left-block">
-                                                    <a><img class="img-responsive" alt="product"
-                                                            src="images/product-detail/drinks/d10.jpg"/></a>
+                                                        <div class="quick-view">
+                                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                            <a title="Add to compare" class="compare" href="#"></a>
+                                                            <a title="Quick view" href="<%-result[i].image%>" class="search fancybox-button"></a>
+                                                        </div>
+                                                        <div class="add-to-cart">
+                                                            <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="<%-result[i].pro_name%>"
+                                                               data-price="<%-result[i].price%>" data-image="drinks/d10.jpg" data-product-code="MS109">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="right-block">
+                                                        <h5 class="product-name"><a href="#"><%-result[i].pro_name%></a></h5>
 
-                                                    <div class="quick-view">
-                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                        <a title="Add to compare" class="compare" href="#"></a>
-                                                        <a title="Quick view" href="images/product-detail/drinks/d10_zoom.jpg" class="search fancybox-button"></a>
+                                                        <div class="content_price">
+                                                            <span class="price product-price"><span style="color: black">Price:</span> <%-result[i].price%>đ</span>
+                                                        </div>
                                                     </div>
-                                                    <div class="add-to-cart">
-                                                        <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="Malabar Spinach"
-                                                           data-price="20000" data-image="drinks/d10.jpg" data-product-code="MS109">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="right-block">
-                                                    <h5 class="product-name"><a href="#">Malabar Spinach</a></h5>
-
-                                                    <div class="content_price">
-                                                        <span class="price product-price"><span style="color: black">Price:</span> 20,000đ</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-sm-4 product-item" style="width: 280px;">
-                                                <div class="left-block">
-                                                    <a><img class="img-responsive" alt="product"
-                                                            src="images/product-detail/drinks/d11.jpg"/></a>
-
-                                                    <div class="quick-view">
-                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                        <a title="Add to compare" class="compare" href="#"></a>
-                                                        <a title="Quick view" href="images/product-detail/drinks/d11_zoom.jpg" class="search fancybox-button"></a>
-                                                    </div>
-                                                    <div class="add-to-cart">
-                                                        <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="Radish"
-                                                           data-price="55000" data-image="drinks/d11.jpg" data-product-code="RD109">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="right-block">
-                                                    <h5 class="product-name"><a href="#">Radish</a></h5>
-
-                                                    <div class="content_price">
-                                                        <span class="price product-price"><span style="color: black">Price:</span> 55,000đ</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-sm-4 product-item" style="width: 280px;">
-                                                <div class="left-block">
-                                                    <a><img class="img-responsive" alt="product"
-                                                            src="images/product-detail/drinks/d12.jpg"/></a>
-
-                                                    <div class="quick-view">
-                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                        <a title="Add to compare" class="compare" href="#"></a>
-                                                        <a title="Quick view" href="images/product-detail/drinks/d12_zoom.jpg" class="search fancybox-button"></a>
-                                                    </div>
-                                                    <div class="add-to-cart">
-                                                        <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="Romaine"
-                                                           data-price="85000" data-image="drinks/d12.jpg" data-product-code="RM109">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="right-block">
-                                                    <h5 class="product-name"><a href="#">Romaine</a></h5>
-
-                                                    <div class="content_price">
-                                                        <span class="price product-price"><span style="color: black">Price:</span> 85,000đ</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-sm-4 product-item" style="width: 280px;">
-                                                <div class="left-block">
-                                                    <a><img class="img-responsive" alt="product"
-                                                            src="images/product-detail/drinks/d13.jpg"/></a>
-
-                                                    <div class="quick-view">
-                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                        <a title="Add to compare" class="compare" href="#"></a>
-                                                        <a title="Quick view" href="images/product-detail/drinks/d13_zoom.jpg" class="search fancybox-button"></a>
-                                                    </div>
-                                                    <div class="add-to-cart">
-                                                        <a class="add-item-to-cart" title="drinks/d13.jpg" data-product-code="MS109">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="right-block">
-                                                    <h5 class="product-name"><a href="#">Mustard Spinac</a></h5>
-
-                                                    <div class="content_price">
-                                                        <span class="price product-price"><span style="color: black">Price:</span> 35,000đ</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-sm-4 product-item" style="width: 280px;">
-                                                <div class="left-block">
-                                                    <a><img class="img-responsive" alt="product"
-                                                            src="images/product-detail/drinks/d14.jpg"/></a>
-
-                                                    <div class="quick-view">
-                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                        <a title="Add to compare" class="compare" href="#"></a>
-                                                        <a title="Quick view" href="images/product-detail/drinks/d14_zoom.jpg" class="search fancybox-button"></a>
-                                                    </div>
-                                                    <div class="add-to-cart">
-                                                        <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="Taro"
-                                                           data-price="25000" data-image="drinks/d14.jpg" data-product-code="TR109">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="right-block">
-                                                    <h5 class="product-name"><a href="#">Taro</a></h5>
-
-                                                    <div class="content_price">
-                                                        <span class="price product-price"><span style="color: black">Price:</span> 25,000đ</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-sm-4 product-item" style="width: 280px;">
-                                                <div class="left-block">
-                                                    <a><img class="img-responsive" alt="product"
-                                                            src="images/product-detail/drinks/d15.jpg"/></a>
-
-                                                    <div class="quick-view">
-                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                        <a title="Add to compare" class="compare" href="#"></a>
-                                                        <a title="Quick view" href="images/product-detail/drinks/d15_zoom.jpg" class="search fancybox-button"></a>
-                                                    </div>
-                                                    <div class="add-to-cart">
-                                                        <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="Tomato"
-                                                           data-price="55000" data-image="drinks/d15.jpg" data-product-code="TT109">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="right-block">
-                                                    <h5 class="product-name"><a href="#">Tomato</a></h5>
-
-                                                    <div class="content_price">
-                                                        <span class="price product-price"><span style="color: black">Price:</span> 55,000đ</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-sm-4 product-item" style="width: 280px;">
-                                                <div class="left-block">
-                                                    <a><img class="img-responsive" alt="product"
-                                                            src="images/product-detail/drinks/d16.jpg"/></a>
-
-                                                    <div class="quick-view">
-                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                        <a title="Add to compare" class="compare" href="#"></a>
-                                                        <a title="Quick view" href="images/product-detail/drinks/d16_zoom.jpg class="search fancybox-button"></a>
-                                                    </div>
-                                                    <div class="add-to-cart">
-                                                        <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="Water Cress"
-                                                           data-price="25000" data-image="drinks/d16.jpg" data-product-code="WC109">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="right-block">
-                                                    <h5 class="product-name"><a href="#">Water Cress</a></h5>
-
-                                                    <div class="content_price">
-                                                        <span class="price product-price"><span style="color: black">Price:</span> 25,000đ</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-sm-4 product-item" style="width: 280px;">
-                                                <div class="left-block">
-                                                    <a><img class="img-responsive" alt="product"
-                                                            src="images/product-detail/drinks/d17.jpg"/></a>
-
-                                                    <div class="quick-view">
-                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                        <a title="Add to compare" class="compare" href="#"></a>
-                                                        <a title="Quick view" href="images/product-detail/drinks/d17_zoom.jpg" class="search fancybox-button"></a>
-                                                    </div>
-                                                    <div class="add-to-cart">
-                                                        <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="Sweet Potatos"
-                                                           data-price="22000" data-image="drinks/d17.jpg" data-product-code="SWP109">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="right-block">
-                                                    <h5 class="product-name"><a href="#">Sweet Potatos</a></h5>
-
-                                                    <div class="content_price">
-                                                        <span class="price product-price"><span style="color: black">Price:</span> 22,000đ</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-sm-4 product-item" style="width: 280px;">
-                                                <div class="left-block">
-                                                    <a><img class="img-responsive" alt="product"
-                                                            src="images/product-detail/drinks/d18.jpg"/></a>
-
-                                                    <div class="quick-view">
-                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                        <a title="Add to compare" class="compare" href="#"></a>
-                                                        <a title="Quick view" href="images/product-detail/drinks/d18_zoom.jpg" class="search fancybox-button"></a>
-                                                    </div>
-                                                    <div class="add-to-cart">
-                                                        <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="Green Pumpkin"
-                                                           data-price="45000" data-image="drinks/18.jpg" data-product-code="PC109">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="right-block">
-                                                    <h5 class="product-name"><a href="#">Green Pumpkin</a></h5>
-
-                                                    <div class="content_price">
-                                                        <span class="price product-price"><span style="color: black">Price:</span> 45,000đ</span>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                                </li>
+                                            <%}%>
                                         </ul>
                                     </div>
                                 </div>
@@ -400,11 +218,11 @@
                     <div class="bottom-pagination">
                         <nav>
                             <ul class="pagination">
-                                <li><a href="product-drinks.html">1</a></li>
-                                <li class="active"><a href="product-drinks-2.html">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
+                                <li><a class="active">1</a></li>
+                                <li><a>2</a></li>
+                                <li><a>3</a></li>
+                                <li><a>4</a></li>
+                                <li><a>5</a></li>
                                 <li>
                                     <a href="#" aria-label="Next">
                                         <span aria-hidden="true">Next &raquo;</span>
