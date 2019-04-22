@@ -76,8 +76,6 @@ app.use('/signinFacebook', signinFacebookRouter);
 app.use('/payment', paymentRouter);
 app.use('/sendmail', emailGuestRouter);
 app.use('/users', usersRouter);
-app.use('/', indexRouter);
-app.use('/product-drinks', drinksRouter);
 app.use('/check-out', checkoutRouter);
 app.use('/policy-faq', policyFaqRouter);
 app.use('/about-us', aboutRouter);
@@ -86,10 +84,12 @@ app.use('/news', newsRouter);
 app.use('/paymentbill', paymentbillRouter);
 app.use('/removeemail', removeEmailClientRouter);
 app.use('/email-guest', emailRouter);
-app.use('/admin-set', adminSetRouter);
-app.use('/admin-set', productRouter);
 app.use('/remove', removeRouter);
 app.use('/admin', adminRouter);
+app.use('/admin-set', adminSetRouter);
+app.use('/admin-set', productRouter);
+app.use('/', drinksRouter);
+app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
