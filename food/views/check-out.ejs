@@ -33,12 +33,12 @@
                 <a href="/"><img src="./images/logochef.png" class="LogoChef"/></a>
             </div>
             <div class="col-xs-4 col-sm-12 col-md-5 col-lg-4 header-search-box">
-                <form class="form-inline">
+                <div class="form-inline">
                     <div class="form-group input-serach">
                         <input type="text" placeholder="Search ...">
                     </div>
                     <button type="submit" class="pull-right btn-search"><i class="fa fa-search"></i></button>
-                </form>
+                </div>
             </div>
 
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 group-button-header">
@@ -213,23 +213,44 @@
                     </div>
                     <div id="payment-method-content" class="panel-collapse collapse">
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/card.js"></script>
-<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/jquery.card.js"></script>
+<script type="text/javascript" src="./lib/payment.js"></script>
                         <div class="panel-body row">
                             <div class="col-md-12">
                                 <div id="CCForm">
                                     <div class="form-container">
-                                          <div class="personal-information">
-                                            <h1>Payment Information</h1>
-                                          </div> <!-- end of personal-information -->
-                                           
-                                          <input id="column-left" type="text" name="first-name" placeholder="First Name"/>
-                                          <input id="column-right" type="text" name="last-name" placeholder="Surname"/>
-                                          <input id="input-field" type="text" name="number" placeholder="Card Number"/>
-                                          <input id="column-left" type="text" name="expiry" placeholder="MM / YY"/>
-                                          <input id="column-right" type="text" name="cvc" placeholder="CCV"/>
-                                         
-                                          <div class="card-wrapper"></div>
+                                        <div class='fullName'>
+                                            <div class="inLine" style="margin-right: .5em;">
+                                                <span class="placeholderName">First Name</span>
+                                                <input class="ip-pay fName" id="column-left" type="text" name="first-name" placeholder="First Name"/>
+                                                <span class="span-pay" style="margin-right: .5em;"></span>
+                                            </div>
+                                            <div class="inLine" style="margin-left: .5em;">
+                                                <span class="placeholderName">Surname</span>
+                                                <input class="ip-pay lName" id="column-right" type="text" name="last-name" placeholder="Surname"/>
+                                                <span class="span-pay" style="margin-left: .5em;"></span>
+                                            </div>
+                                        </div>
+                                        <div class="fullName">
+                                            <div class="inLine" style="width: 100%;">
+                                                <span class="placeholderName">Card Number</span>
+                                                <input class="ip-pay" id="input-field" type="text" name="number" placeholder="Card Number"/>
+                                                <span class="span-pay"></span>
+                                            </div>
+                                        </div>
+                                        <div class="fullName">
+                                            <div class="inLine" style="margin-right: .5em;">
+                                                <span class="placeholderName">MM / YY</span>
+                                                <input class="ip-pay" id="column-left" type="text" name="expiry" placeholder="MM / YY"/>
+                                                <span class="span-pay" style="margin-right: .5em;"></span>
+                                            </div>
+                                            <div class="inLine" style="margin-left: .5em;">
+                                                <span class="placeholderName">CCV</span>
+                                                <input class="ip-pay" id="column-right" type="text" name="cvc" placeholder="CCV"/>
+                                                <span class="span-pay" style="margin-left: .5em;"></span>
+                                            </div>
+                                        </div>
+                                        <div class="card-wrapper"></div>
+                                        <button class="button pull-left collapsed" type="submit" id="button-payment-method" data-toggle="collapse" data-parent="#checkout-page" data-target="#confirm-content" aria-expanded="false">Continue</button>
                                     </div>
                                     <script>
                                         $('form').card({
@@ -282,13 +303,6 @@
                                         </tr>
                                         <tr>
 
-                                            <td colspan="3"><strong>Voucher</strong></td>
-                                            <td colspan="2">
-                                                <input style="font-weight: normal; letter-spacing: 3px;" class="input form-control" placeholder="Voucher....">
-                                            </td>
-                                       </tr>
-                                        <tr>
-
                                             <td colspan="3"><strong>Total</strong></td>
                                             <td colspan="2" id="total_price_all" style="font-weight: bold; color: #e84d1c; font-size: 20px;">54,000</td>
                                         </tr>
@@ -329,16 +343,14 @@
                         <div class="tab-content">
                             <!-- LOGIN -->
                             <div class="tab-pane active" id="Login">
-                                <form action="javascript:void()" name="dangnhap_from" class="form-horizontal"
+                                <div class="form-horizontal"
                                       id="dangnhap_from" method="post">
-                                    <div class="form-group">
-                                        <label for="email_login" class="col-sm-3 control-label">Email</label>
-
-                                        <div class="col-sm-9">
-                                            <input type="email" class="input form-control" id="email_login"
-                                                   placeholder="Email...."/>
-                                        </div>
-                                    </div>
+                                    <form action="/sendmail" method="post" accept-charset="utf-8" class="input-group" id="mail-box">
+                                        <input type="text" name="email" placeholder="Your email address">
+                                          <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">OK</button>
+                                          </span>
+                                    </form>
                                     <div class="form-group">
                                         <label for="pass_login" class="col-sm-3 control-label">Password</label>
 
@@ -354,7 +366,7 @@
                                             <button class="button" type="submit" id="button-confirm">Login</button>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
 
                             <!-- REGISTER -->
@@ -571,39 +583,8 @@
 <script type="text/javascript" src="js/shoppingCart.js"></script>
 
 <script type="text/javascript" src="js/layout.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        $("#checkout-page").unbind('submit')
-        $("#btn-remove-all-item").click(e=>{
-            window.location.href = "/payment";
-        })
-        $("#button-confirm").click(function(event) {
-            var arrErr = []
-            $.each($("input.form-control[type=text]"), function(index, val) {
-                if($(this).val()===""){
-                   arrErr.push($(this)) 
-                }
-            });
-            console.log(arrErr.length);
-            if(arrErr.length>0){
-                $.each(arrErr, function(index, val) {
-                    val.addClass("bd-danger");
-                    $(".accordion-toggle.collapsed:contains('Step 1: Your Personal Details')").removeClass('collapsed').attr("aria-expanded",true)
-                    $("#payment-address-content").attr("aria-expanded",true).css("height","387px").addClass('in')
-                });
-                window.location.href.split("#payment-address").join("")
-            }
-            $("#checkout-page").submit();
-        });
-        Layout.init();
-        Layout.initOWL();
-        Layout.initTwitter();
-        Layout.initImageZoom();
-        Layout.initTouchspin();
-        Layout.initUniform();
-        Layout.initSliderRange();
-    });
-</script>
+<script type="text/javascript" src="./js/controlCheckOut.js"></script>
+<script src="/js/emailUser.js"></script>
 </body>
 
 </html>

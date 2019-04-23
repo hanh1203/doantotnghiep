@@ -445,12 +445,12 @@
                 <div class="col-md-3">
                 <div id="contact-box">
                     <div class="introduce-title">Subscribe to UberChef Shop newsletter</div>
-                    <div class="input-group" id="mail-box">
-                        <input type="text" placeholder="Your email address"/>
+                    <form action="/sendmail" method="post" accept-charset="utf-8" class="input-group" id="mail-box">
+                        <input type="text" name="email" placeholder="Your email address">
                           <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">OK</button>
+                            <button class="btn btn-default" type="submit">OK</button>
                           </span>
-                    </div><!-- /input-group -->
+                    </form>
                     <div class="introduce-title">Follow Us</div>
                     <!--<div class="social-link">-->
                         <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
@@ -500,17 +500,7 @@
 <script type="text/javascript" src="js/shoppingCart.js"></script>
 
 <script type="text/javascript" src="js/layout.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        Layout.init();
-        Layout.initOWL();
-        Layout.initTwitter();
-        Layout.initImageZoom();
-        Layout.initTouchspin();
-        Layout.initUniform();
-        Layout.initSliderRange();
-    });
-</script>
+<script src="/js/emailUser.js"></script>
 </body>
 
 </html>

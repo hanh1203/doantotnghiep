@@ -181,6 +181,7 @@
                                         <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
                                         <ul class="product-list">
                                             <%for (var i = 0; i < result.length; i++) {%>
+                                                <%var value = result[i].price.toLocaleString(undefined,{ minimumFractionDigits: 0 });%>                                            
                                                 <li class="col-sm-4 product-item" style="width: 280px;">
                                                     <div class="left-block">
                                                         <a><img class="img-responsive" alt="product"
@@ -193,14 +194,14 @@
                                                         </div>
                                                         <div class="add-to-cart">
                                                             <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="<%-result[i].pro_name%>"
-                                                               data-price="<%-result[i].price%>" data-image="drinks/d10.jpg" data-product-code="MS109">Add to Cart</a>
+                                                               data-price="<%-result[i].price%>" data-image="<%-result[i].image%>" data-product-code="<%-result[i]._id%>">Add to Cart</a>
                                                         </div>
                                                     </div>
                                                     <div class="right-block">
                                                         <h5 class="product-name"><a href="#"><%-result[i].pro_name%></a></h5>
 
                                                         <div class="content_price">
-                                                            <span class="price product-price"><span style="color: black">Price:</span> <%-result[i].price%>đ</span>
+                                                            <span class="price product-price"><span style="color: black">Price:</span><%-value%>VNĐ</span>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -438,7 +439,7 @@
                     <span class="toal-price pull-right" id="total_price">54,000đ</span>
                 </div>
                 <div class="cart-buttons">
-                    <a href="shoping-cart.html" class="btn-check-out">Payment</a>
+                    <a href="/payment" class="btn-check-out">Payment</a>
                 </div>
             </div>
         </div>
@@ -473,23 +474,23 @@
                         <ul id="introduce-support" class="introduce-list">
                             <li> Mon - Fri: 7am to 8pm </li>
                             <li>Sat & Sun: 7am to 6pm</li>
-                            <li><a href="policy-faq.html">How to Buy</a></li>
-                            <li><a href="policy-faq.html">How to Payment</a></li>
-                            <li><a href="policy-faq.html">FAQ</a></li>
-                            <li><a href="policy-faq.html">Return & Change Policy</a></li>
-                            <li><a href="policy-faq.html">Terms & Conditions</a></li>
+                            <li><a href="/policy-faq">How to Buy</a></li>
+                            <li><a href="/policy-faq">How to Payment</a></li>
+                            <li><a href="/policy-faq">FAQ</a></li>
+                            <li><a href="/policy-faq">Return & Change Policy</a></li>
+                            <li><a href="/policy-faq">Terms & Conditions</a></li>
                     </div>
                 
             
                     <div class="col-sm-6">
                         <div class="introduce-title">Policy</div>
                         <ul id="introduce-Account" class="introduce-list">
-                            <li><a href="policy-faq.html">Security Policy</a></li>
-                            <li><a href="policy-faq.html">Payment Policy</a></li>
-                            <li><a href="policy-faq.html">Return & Change Policy</a></li>
-                            <li><a href="policy-faq.html">Terms & Conditions</a></li>
-                            <li><a href="policy-faq.html">Return & Change Policy</a></li>
-                            <li><a href="policy-faq.html">Terms & Conditions</a></li>
+                            <li><a href="/policy-faq">Security Policy</a></li>
+                            <li><a href="/policy-faq">Payment Policy</a></li>
+                            <li><a href="/policy-faq">Return & Change Policy</a></li>
+                            <li><a href="/policy-faq">Terms & Conditions</a></li>
+                            <li><a href="/policy-faq">Return & Change Policy</a></li>
+                            <li><a href="/policy-faq">Terms & Conditions</a></li>
                         </ul>
                     </div>
                 </div>
@@ -560,13 +561,6 @@
         var realName = name.charAt(0).toUpperCase()+name.slice(1);
         $(`.tree-menu>li`).removeClass('active')
         $(`.tree-menu>li>a:contains(${realName})`).parent("li").addClass('active')
-        Layout.init();
-        Layout.initOWL();
-        Layout.initTwitter();
-        Layout.initImageZoom();
-        Layout.initTouchspin();
-        Layout.initUniform();
-        Layout.initSliderRange();t
     });
 </script>
 </body>

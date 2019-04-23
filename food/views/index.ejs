@@ -169,44 +169,39 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12">
                 <h2 class="page-heading">
-                    <span class="page-heading-title"><img alt="fashion" src="images/icons8-three.png"/> PROMOTION</span>
+                    <span class="page-heading-title"><img alt="fashion" src="images/icons8-three.png"/> HOT</span>
                 </h2>
 
                 <div class="latest-deals-product">
                     <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav="true"
                         data-margin="10" data-autoplayTimeout="1000" data-autoplayHoverPause="true"
                         data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":5}}'>
-                        <li>
-
-                            <div class="left-block">
-                                <a><img class="img-responsive" alt="product"
-                                                 src="images/product-detail/promotion_home/p1.jpg"/></a>
-
-                                <div class="quick-view">
-                                    <a title="Add to my wishlist" class="heart"></a>
-                                    <a title="Add to compare" class="compare"></a>
-                                    <a title="Quick view" href="images/product-detail/promotion_home/p1_zoom.jpg" class="search fancybox-button"></a>
+                        <%for (var i = 0; i < hot.length; i++) {%>
+                            <%var value = hot[i].price.toLocaleString(undefined,{ minimumFractionDigits: 0 });%>
+                            <li>
+                                <div class="left-block">
+                                    <a>
+                                        <img class="img-responsive" alt="product" src="<%-hot[i].image%>"/>
+                                    </a>
+                                    <div class="quick-view">
+                                        <a title="Add to my wishlist" class="heart"></a>
+                                        <a title="Add to compare" class="compare"></a>
+                                        <a title="Quick view" href="<%-hot[i].image%>" class="search fancybox-button"></a>
+                                    </div>
+                                    <div class="add-to-cart">
+                                        <a class="add-item-to-cart" title="Add to Carr" data-name="<%-hot[i].pro_name%>"
+                                           data-price="<%-hot[i].price%>" data-image="<%-hot[i].image%>" data-product-code="<%-hot[i]._id%>">Add to Cart</a>
+                                    </div>
                                 </div>
-                                <div class="add-to-cart">
-                                    <a class="add-item-to-cart" title="Add to Carr" data-name="Oysters"
-                                       data-price="38500" data-image="promotion_home/p1.jpg" data-product-code="AS109">Add to Cart</a>
+                                <div class="right-block">
+                                    <h5 class="product-name"><a href="/detail/<%-hot[i]._id%>"><%-hot[i].pro_name%></a></h5>
+                                    <div class="content_price">
+                                        <span class="price product-price">
+                                            <span style="color: orangered">Best Price:</span> <%-value%> VNĐ</span>
+                                    </div>
                                 </div>
-                                <div class="price-percent-reduction2">
-                                    -30% OFF
-                                </div>
-                            </div>
-                            <div class="right-block">
-                                <h5 class="product-name"><a href="oysters-detail">Oysters</a></h5>
-
-                                <div class="content_price">
-                                    <span class="price product-price">
-                                        <span style="color: orangered">Best Price:</span> 38,500đ</span>
-                                    <br><span style="color: black">Price:</span>
-                                    <span class="price old-price">55,000đ</span>
-                                </div>
-                            </div>
-                        </li>
-                        
+                            </li>
+                        <%}%>
                     </ul>
                 </div>
             </div>
@@ -252,7 +247,7 @@
             <nav class="navbar nav-menu show-brand">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-brand"><a> <img alt="fashion" src="images/icon_like.png"/> Best Seller</a></div>
+                    <div class="navbar-brand"><a> <img alt="fashion" src="images/icon_like.png"/> DRINKS </a></div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse">
@@ -268,33 +263,34 @@
                         <div class="box-right">
                             <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
                             <ul class="product-list">
-                                <li class="col-sm-4 product-item">
-                                    <div class="left-block">
-                                        <a><img class="img-responsive" alt="product"
-                                                         src="images/product-detail/food_home/1.jpg"/></a>
+                                <%for (var i = 0; i < drinks.length; i++) {%>
+                                    <%var value = drinks[i].price.toLocaleString(undefined,{ minimumFractionDigits: 0 });%>
+                                    <li class="col-sm-4 product-item">
+                                        <div class="left-block">
+                                            <a><img class="img-responsive" alt="product"
+                                                             src="<%-drinks[i].image%>"/></a>
 
-                                        <div class="quick-view">
-                                            <a title="Add to my wishlist" class="heart"></a>
-                                            <a title="Add to compare" class="compare"></a>
-                                            <a title="Quick view" href="images/product-detail/food_home/1_zoom.jpg" class="search fancybox-button"></a>
-                                        </div>
-                                        <div class="add-to-cart">
-                                            <a class="add-item-to-cart" title="Add to Cart" data-name="Fried onion chili"
-                                               data-price="55000" data-image="food_home/1.jpg" data-product-code="SP109">Add to Cart</a>
-                                        </div>
-                                        <div class="bestseller"></div>
-                                    </div>
-                                    <div class="right-block">
-                                        <h5 class="product-name"><a>Fried onion chili</a></h5>
-
-                                        <div class="content_price">
-                                            <span class="price product-price"><span style="color: black">Price:</span> 55,000đ</span>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart"></a>
+                                                <a title="Add to compare" class="compare"></a>
+                                                <a title="Quick view" href="<%-drinks[i].image%>" class="search fancybox-button"></a>
                                             </div>
-                                    </div>
-                                </li>
-                                
-                            </ul>
+                                            <div class="add-to-cart">
+                                                <a class="add-item-to-cart" title="Add to Cart" data-name="<%-drinks[i].pro_name%>"
+                                                   data-price="<%-drinks[i].price%>" data-image="<%-drinks[i].image%>" data-product-code="<%-drinks[i]._id%>">Add to Cart</a>
+                                            </div>
+                                            <div class="bestseller"></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a><%-drinks[i].pro_name%></a></h5>
 
+                                            <div class="content_price">
+                                                <span class="price product-price"><span style="color: black">Price:</span> <%-value%>đ</span>
+                                                </div>
+                                        </div>
+                                    </li>
+                                <%}%>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -307,7 +303,7 @@
             <nav class="navbar nav-menu show-brand">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-brand"><a> <img alt="fashion" src="images/icon_paper-plane.png"/> Coming Soon </a></div>
+                    <div class="navbar-brand"><a> <img alt="fashion" src="images/icon_paper-plane.png"/> SEAFOOD </a></div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse">
@@ -323,31 +319,34 @@
                         <div class="box-right">
                             <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
                             <ul class="product-list">
-                                <li class="col-sm-4 product-item">
-                                    <div class="left-block">
-                                        <a><img class="img-responsive" alt="product"
-                                                src="images/product-detail/food_home/11.jpg"/></a>
+                                <%for (var i = 0; i < seafood.length; i++) {%>
+                                    <%var value = seafood[i].price.toLocaleString(undefined,{ minimumFractionDigits: 0 });%>
+                                    <li class="col-sm-4 product-item">
+                                        <div class="left-block">
+                                            <a><img class="img-responsive" alt="product"
+                                                             src="<%-seafood[i].image%>"/></a>
 
-                                        <div class="quick-view">
-                                            <a title="Add to my wishlist" class="heart"></a>
-                                            <a title="Add to compare" class="compare"></a>
-                                            <a title="Quick view" href="images/product-detail/food_home/11_zoom.jpg" class="search fancybox-button"></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart"></a>
+                                                <a title="Add to compare" class="compare"></a>
+                                                <a title="Quick view" href="<%-seafood[i].image%>" class="search fancybox-button"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a class="add-item-to-cart" title="Add to Cart" data-name="<%-seafood[i].pro_name%>"
+                                                   data-price="<%-seafood[i].price%>" data-image="<%-seafood[i].image%>" data-product-code="<%-seafood[i]._id%>">Add to Cart</a>
+                                            </div>
+                                            <div class="bestseller"></div>
                                         </div>
-                                        <div class="add-to-cart">
-                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
-                                        </div>
-                                        <div class="comingsoon"></div>
-                                    </div>
-                                    <div class="right-block">
-                                        <h5 class="product-name"><a>Apple</a></h5>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a><%-seafood[i].pro_name%></a></h5>
 
-                                        <div class="content_price">
-                                            <span class="price product-price"><span style="color: black">Price:</span> 85,000đ</span>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span style="color: black">Price:</span> <%-value%>đ</span>
+                                                </div>
                                         </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                <%}%>
                             </ul>
-
                         </div>
                     </div>
                 </div>
@@ -730,17 +729,6 @@
 
 <script type="text/javascript" src="js/layout.js"></script>
 <script src="/js/emailUser.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        Layout.init();
-        Layout.initOWL();
-        Layout.initTwitter();
-        Layout.initImageZoom();
-        Layout.initTouchspin();
-        Layout.initUniform();
-        Layout.initSliderRange();
-    });
-</script>
 </body>
 
 </html>

@@ -59,9 +59,6 @@ var shoppingCart = (function () {
                 return;
             }
         }
-
-        console.log("addItemToCart:", name, price, count, image, productcode);
-
         var item = new Item(name, price, count, image, productcode);
         cart.push(item);
         saveCart();
@@ -128,10 +125,7 @@ var shoppingCart = (function () {
 
     obj.listCart = function () { // -> array of Items
         var cartCopy = [];
-        console.log("Listing cart");
-        console.log(cart);
         for (var i in cart) {
-            console.log(i);
             var item = cart[i];
             var itemCopy = {};
             for (var p in item) {
@@ -168,7 +162,6 @@ $("#clear-cart").click(function (event) {
 
 function displayCart() {
     var cartArray = shoppingCart.listCart();
-    console.log(cartArray);
     var output = "";
     if (cartArray.length <= 0) {
         output = "<p style='padding-left: 20px;'>Chưa có sản phẩm nào</p>"
@@ -203,7 +196,6 @@ function displayCart() {
 //show product in page shoping cart
 function displayCartPageCart() {
     var cartArray = shoppingCart.listCart();
-    console.log(cartArray);
     var output = "";
     if (cartArray.length <= 0) {
         output = "<tr><td colspan='7' style='text-align: center'><p style='padding-left: 20px;'>Chưa có sản phẩm nào</p></td></tr>"
@@ -213,23 +205,23 @@ function displayCartPageCart() {
             output
                 +="<tr>"
                 +"<td class='cart_product'>"
-                +"<a href='#'><img src='images/product-detail/"+cartArray[i].image+"' alt='Product'></a>"
+                +"<a href='#'><img src='"+cartArray[i].image+"' alt='Product'></a>"
                 +"</td>"
                 +"<td class='cart_description'>"
                 +"<p class='product-name'><a href='#'>"+cartArray[i].name+"</a></p>"
                 +"<small class='cart_ref'>Product Code : "+cartArray[i].productcode+"</small>"
-                +"<input class='form-control input-sm' type='text' readonly name='code' value='"+cartArray[i].productcode+"'/>"
+                +"<input class='form-control input-sm' type='text' readonly name='code' style='display:none;' value='"+cartArray[i].productcode+"'/>"
                 +"<br>"
                 +"</td>"
                 +"<td class='cart_avail'><span class='label label-success'>In stock</span></td>"
                 +"<td class='price'><span style='color: #e84d1c; font-size: 18px; font-weight: bold;'>" + numberWithCommas(cartArray[i].price) + "</span></td>"
-                +"<input class='form-control input-sm' name='unit_price' style='display:none' type='text' readonly value='" + numberWithCommas(cartArray[i].price) + "'>"
+                +"<input class='form-control input-sm' name='unit_price' style='display:none' type='text' readonly value='" + numberWithCommas(cartArray[i].price).split(",").join("") + "'>"
                 +"<td class='qty'>"
                 +"<input class='form-control input-sm' type='text' name='qty' readonly value='" + cartArray[i].count + "'>"
                 +"<a class='plus' data-product-code='" + cartArray[i].productcode + "'><i class='fa fa-caret-up'></i></a>"
                 +"<a class='minus' data-product-code='" + cartArray[i].productcode + "'><i class='fa fa-caret-down'></i></a>"
                 +"</td>"
-                +"<td class='price'>"
+                +"<td class='price'><input class='form-control input-sm' type='text' name='total' style='display:none;' readonly value='" + numberWithCommas(cartArray[i].total) + "'>"
                 +"<span style='color: #e84d1c; font-size: 18px; font-weight: bold;'>" + numberWithCommas(cartArray[i].total) + "</span>"
                 +"</td>"
                 +"<td class='action'>"
@@ -246,7 +238,6 @@ function displayCartPageCart() {
 //show product in page checkout
 function displayCartPageCheckOut() {
     var cartArray = shoppingCart.listCart();
-    console.log(cartArray);
     var output = "";
     if (cartArray.length <= 0) {
         output = "<tr><td colspan='7' style='text-align: center'><p style='padding-left: 20px;'>Chưa có sản phẩm nào</p></td></tr>"
@@ -256,21 +247,21 @@ function displayCartPageCheckOut() {
             output
                 +="<tr>"
                 +"<td class='cart_product'>"
-                +"<a href='#'><img src='images/product-detail/"+cartArray[i].image+"' alt='Product'></a>"
+                +"<a href='#'><img src='"+cartArray[i].image+"' alt='Product'></a>"
                 +"</td>"
                 +"<td class='cart_description'>"
                 +"<p class='product-name'><a href='#'>"+cartArray[i].name+"</a></p>"
                 +"<small class='cart_ref'>Product Code : "+cartArray[i].productcode+"</small>"
-                +"<input class='form-control input-sm' type='text' readonly name='code' value='"+cartArray[i].productcode+"'/>"
+                +"<input class='form-control input-sm' type='text' readonly name='code' style='display:none;' value='"+cartArray[i].productcode+"'/>"
                 +"<br>"
                 +"</td>"
                 +"<td class='cart_avail'><span class='label label-success'>In stock</span></td>"
-                +"<td class='price'><input class='form-control input-sm' name='unit_price' style='display:none' type='text' readonly value='"+ numberWithCommas(cartArray[i].price) +"'/><span style='color: #e84d1c; font-size: 18px; font-weight: bold;'>" + numberWithCommas(cartArray[i].price) + "</span></td>"
+                +"<td class='price'><input class='form-control input-sm' name='unit_price' style='display:none' type='text' readonly value='"+ numberWithCommas(cartArray[i].price).split(",").join("") +"'/><span style='color: #e84d1c; font-size: 18px; font-weight: bold;'>" + numberWithCommas(cartArray[i].price) + "</span></td>"
                 +"<td class='qty'>"
                 +"<input class='form-control input-sm' name='qty' style='display:none' type='text' readonly value='" + cartArray[i].count + "'>"
                 +"<label>" + cartArray[i].count + "</label>"
                 +"</td>"
-                +"<td class='price'>"
+                +"<td class='price'><input class='form-control input-sm' type='text' name='total' style='display:none;' readonly value='" + numberWithCommas(cartArray[i].total).split(",").join("") + "'>"
                 +"<span style='color: #e84d1c; font-size: 18px; font-weight: bold;'>" + numberWithCommas(cartArray[i].total) + "</span>"
                 +"</td>"
                 +"</tr>";

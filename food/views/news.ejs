@@ -266,7 +266,7 @@
                                             The internet loves a good “natural cure” recovery story.  For instance, when Dr. Mary Newport, MD, dramatically reverses her husband’s symptoms of Alzheimer’s disease after...
                                         </div>
                                         <div class="entry-more">
-                                            <a href="Readmore_1.html">Read more</a>
+                                            <a href="/news?page=1">Read more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -297,7 +297,7 @@
                                             There is a lot to be said for following a vegan or vegetarian diet; an excess of iron generally isn’t one of them, particularly vegan...
                                         </div>
                                         <div class="entry-more">
-                                            <a href="Readmore_2.html">Read more</a>
+                                            <a href="/news?page=2">Read more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -328,7 +328,7 @@
                                             A common question that I’m asked by my students is, “How can I become less stressed and have more energy, without diminishing my drive and ambition for success?”...
                                         </div>
                                         <div class="entry-more">
-                                            <a href="Readmore_3.html">Read more</a>
+                                            <a href="/news?page=3">Read more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -362,7 +362,7 @@
                                             Crack open an apricot pit and you’ll find a seed that looks, smells, and tastes a lot like an almond. Apricot kernels are used to...
                                         </div>
                                         <div class="entry-more">
-                                            <a href="Readmore_4.html">Read more</a>
+                                            <a href="/news?page=4">Read more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -604,12 +604,12 @@
                 <div class="col-md-3">
                 <div id="contact-box">
                     <div class="introduce-title">Subscribe to UberChef Shop newsletter</div>
-                    <div class="input-group" id="mail-box">
-                        <input type="text" placeholder="Your email address"/>
+                    <form action="/sendmail" method="post" accept-charset="utf-8" class="input-group" id="mail-box">
+                        <input type="text" name="email" placeholder="Your email address">
                           <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">OK</button>
+                            <button class="btn btn-default" type="submit">OK</button>
                           </span>
-                    </div><!-- /input-group -->
+                    </form>
                     <div class="introduce-title">Follow Us</div>
                     <!--<div class="social-link">-->
                         <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
@@ -659,17 +659,7 @@
 <script type="text/javascript" src="js/shoppingCart.js"></script>
 
 <script type="text/javascript" src="js/layout.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        Layout.init();
-        Layout.initOWL();
-        Layout.initTwitter();
-        Layout.initImageZoom();
-        Layout.initTouchspin();
-        Layout.initUniform();
-        Layout.initSliderRange();
-    });
-</script>
+<script src="/js/emailUser.js"></script>
 </body>
 
 </html>

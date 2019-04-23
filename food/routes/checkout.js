@@ -11,6 +11,11 @@ router.post('/', function(req, res, next) {
   mongo.connect(path,(err,db)=>{
   	if(!err){
   		req.body.time = Date.now();
+  		for (var i = 0; i < Object.keys(req.body).length; i++) {
+  			if(!(isNaN(Object.values(req.body)[i]))&&Object.keys(req.body)[i]!=="tel"){
+  				req.body[`${Object.keys(req.body)[i]}`] = Number(Object.values(req.body)[i]);
+  			}
+  		}
   		db.collection("payment").insertOne(req.body,(err)=>{
   			if(!err){
   				res.send(`<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -39,11 +44,12 @@ router.post('/', function(req, res, next) {
 										<p class="text-center">Your booking has been confirmed...</p>
 									</div>
 									<div class="modal-footer">
-										<a href="/" class="btn btn-success btn-block" data-dismiss="modal">OK</a>
+										<a href="/" class="btn btn-success btn-block" id="countTime" data-dismiss="modal">Return to the home page (after 10 seconds)</a>
 									</div>
 								</div>
 							</div>
-						</div>`)
+						</div>
+						<script src="./js/countdown.js"></script>`)
   			}else{
   				res.send("error!")
   			}

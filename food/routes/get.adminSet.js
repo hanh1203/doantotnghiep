@@ -11,7 +11,11 @@ router.get('/:produce', function(req, res, next) {
 		mongo.connect(pathMongodb,(err, db)=>{
 			db.collection(req.params.produce.toString()).find().toArray((err,result)=>{
 				db.close()
-	  			res.render('admin-set',{result:result});
+				if(!err){
+	  				res.render('admin-set',{result:result});
+				}else{
+					res.render("error",{ message:"error",error:{status:404,stack:"Not found in database"}})
+				}
 			})
 		})
 	}else{

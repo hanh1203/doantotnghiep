@@ -8,11 +8,11 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 router.post('/', function(req, res, next) {
-  			console.log(req.body);
   mongo.connect(path,(err,db)=>{
   	if(!err&&validateEmail(req.body.email)){
   		req.body.time = Date.now();
   		db.collection("emailGuest").insertOne(req.body,(err)=>{
+  			db.close()
   			if(!err){
   				res.send(`<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 							<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -37,14 +37,15 @@ router.post('/', function(req, res, next) {
 											<h4 class="modal-title">Successful</h4>	
 										</div>
 										<div class="modal-body">
-											<p class="text-center">....</p>
+											<p class="text-center">Thank you for trusting us</p>
 										</div>
 										<div class="modal-footer">
-											<a href="/" class="btn btn-success btn-block" data-dismiss="modal">OK</a>
+											<a href="/" class="btn btn-success btn-block" id="countTime" data-dismiss="modal">Return to the home page (after 10 seconds)</a>
 										</div>
 									</div>
 								</div>
-							</div>`)
+							</div>
+							<script src="./js/countdown.js"></script>`)
   			}else{
   				res.send("error!")
   			}

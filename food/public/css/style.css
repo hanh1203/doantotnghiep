@@ -6022,7 +6022,7 @@ Social Icons
     
 }
 .bd-danger{
-    border: 1px solid #e74c3c;
+    border: 1px solid #e74c3c!important;
 }
 /* .columns-container{
     background: url(../images/aboutus/bg-pro.jpg) no-repeat  center;
@@ -6145,3 +6145,42 @@ input[type="submit"]:hover{
     float: none;
   }
 }
+
+.jp-card-container{
+    margin: 4em auto!important;
+}
+.fullName{
+    display: flex;
+}
+.form-container{
+    width: 100%;
+}
+.ip-pay{
+    width: 100% !important;
+    margin-bottom: 2em;
+}
+.inLine{
+    position: relative;
+    width: 50%;
+}
+.placeholderName, .ip-pay::placeholder{
+    color: tomato;
+}
+.placeholderName{
+    padding-left: 3%;
+    font-size: 14px;
+    transition: .5s;
+    position: absolute;
+    bottom: 3.1em;
+}
+.span-pay{
+    transition: .5s;
+    background: tomato;
+    height: 1px;
+    position: absolute;
+    bottom: 2em;
+    left: 0px;
+}
+.card-wrapper{
+    margin-bottom: 2em;
+}   

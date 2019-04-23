@@ -1,4 +1,5 @@
-var Layout = function () {
+jQuery(document).ready(function($) {
+    var Layout = function () {
 
      // IE mode
     var isRTL = false;
@@ -535,3 +536,11 @@ var Layout = function () {
 
     };
 }();
+    Layout.init();
+    Layout.initOWL();
+    Layout.initTwitter();
+    Layout.initImageZoom;
+    Layout.initTouchspin;
+    Layout.initUniform();
+    Layout.initSliderRange;
+}); 
