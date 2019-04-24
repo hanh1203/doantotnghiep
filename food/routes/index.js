@@ -6,7 +6,7 @@ var path = require("./mongodb.path");
 router.get('/', function(req, res, next) {
 	mongo.connect(path,(err, db)=>{
 		if(db){
-			var arrHot = [];
+			var objectHot = {};
 			db.collection("drinks").find().sort({"Ngày":-1}).limit(2).toArray((err,drink)=>{
 				db.collection("drinks").find().toArray((err,drinks)=>{
 					db.collection("seafood").find().toArray((err,seafoods)=>{
@@ -17,8 +17,15 @@ router.get('/', function(req, res, next) {
 										db.collection("seafood").find().sort({"Ngày":-1}).limit(2).toArray((err,seafood)=>{
   											db.close()
 											if(!err){
-												arrHot = drink.concat(bread).concat(fruits).concat(meat).concat(chicken).concat(seafood);
-												res.render("index",{hot:arrHot, drinks:drinks, seafood:seafoods})
+												objectHot = {
+													"drinks" :drink,
+													"breads" :bread,
+													"fruits" :fruits,
+													"meat"	 :meat,
+													"chicken":chicken,
+													"seafood":seafood
+												}
+												res.render("index",{hot:objectHot, drinks:drinks, seafood:seafoods})
 											}else{
 												res.render("error",{ message:"error",error:{status:404,stack:"Error database"}})
 											}
@@ -31,7 +38,7 @@ router.get('/', function(req, res, next) {
 				})
 			})
 		}else{
-			res.render("error")
+			res.render("error",{ message:"error",error:{status:404,stack:"Error database"}})
 		}
 	})
 });

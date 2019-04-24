@@ -184,7 +184,7 @@
                                                 <%var value = result[i].price.toLocaleString(undefined,{ minimumFractionDigits: 0 });%>                                            
                                                 <li class="col-sm-4 product-item" style="width: 280px;">
                                                     <div class="left-block">
-                                                        <a><img class="img-responsive" alt="product"
+                                                        <a href="/details?is_pro=<%-result[i]._id%>"><img class="img-responsive" alt="product"
                                                                 src="<%-result[i].image%>"/></a>
 
                                                         <div class="quick-view">
@@ -193,12 +193,12 @@
                                                             <a title="Quick view" href="<%-result[i].image%>" class="search fancybox-button"></a>
                                                         </div>
                                                         <div class="add-to-cart">
-                                                            <a class="add-item-to-cart" title="Add to Cart" href="#" data-name="<%-result[i].pro_name%>"
+                                                            <a class="add-item-to-cart" title="Add to Cart" href="/details?is_pro=<%-result[i]._id%>" data-name="<%-result[i].pro_name%>"
                                                                data-price="<%-result[i].price%>" data-image="<%-result[i].image%>" data-product-code="<%-result[i]._id%>">Add to Cart</a>
                                                         </div>
                                                     </div>
                                                     <div class="right-block">
-                                                        <h5 class="product-name"><a href="#"><%-result[i].pro_name%></a></h5>
+                                                        <h5 class="product-name"><a href="/details?is_pro=<%-result[i]._id%>"><%-result[i].pro_name%></a></h5>
 
                                                         <div class="content_price">
                                                             <span class="price product-price"><span style="color: black">Price:</span><%-value%>VNĐ</span>

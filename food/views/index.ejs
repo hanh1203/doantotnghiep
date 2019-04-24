@@ -176,31 +176,33 @@
                     <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav="true"
                         data-margin="10" data-autoplayTimeout="1000" data-autoplayHoverPause="true"
                         data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":5}}'>
-                        <%for (var i = 0; i < hot.length; i++) {%>
-                            <%var value = hot[i].price.toLocaleString(undefined,{ minimumFractionDigits: 0 });%>
-                            <li>
-                                <div class="left-block">
-                                    <a>
-                                        <img class="img-responsive" alt="product" src="<%-hot[i].image%>"/>
-                                    </a>
-                                    <div class="quick-view">
-                                        <a title="Add to my wishlist" class="heart"></a>
-                                        <a title="Add to compare" class="compare"></a>
-                                        <a title="Quick view" href="<%-hot[i].image%>" class="search fancybox-button"></a>
+                        <%for (var i = 0; i < Object.keys(hot).length; i++) {%>
+                            <%for (var j = 0; j < hot[`${Object.keys(hot)[i]}`].length; j++) {%>
+                                <%var value = hot[`${Object.keys(hot)[i]}`][j].price.toLocaleString(undefined,{ minimumFractionDigits: 0 });%>
+                                <li>
+                                    <div class="left-block">
+                                        <a href="/details/<%-Object.keys(hot)[i]%>?is_pro=<%-hot[`${Object.keys(hot)[i]}`][j]._id%>">
+                                            <img class="img-responsive" alt="product" src="<%-hot[`${Object.keys(hot)[i]}`][j].image%>"/>
+                                        </a>
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart"></a>
+                                            <a title="Add to compare" class="compare"></a>
+                                            <a title="Quick view" href="<%-hot[`${Object.keys(hot)[i]}`][j].image%>" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="add-item-to-cart" title="Add to Carr" data-name="<%-hot[`${Object.keys(hot)[i]}`][j].pro_name%>"
+                                               data-price="<%-hot[`${Object.keys(hot)[i]}`][j].price%>" data-image="<%-hot[`${Object.keys(hot)[i]}`][j].image%>" data-product-code="<%-hot[`${Object.keys(hot)[i]}`][j]._id%>">Add to Cart</a>
+                                        </div>
                                     </div>
-                                    <div class="add-to-cart">
-                                        <a class="add-item-to-cart" title="Add to Carr" data-name="<%-hot[i].pro_name%>"
-                                           data-price="<%-hot[i].price%>" data-image="<%-hot[i].image%>" data-product-code="<%-hot[i]._id%>">Add to Cart</a>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="/details/<%-hot[`${Object.keys(hot)[i]}`][j]._id%>"><%-hot[`${Object.keys(hot)[i]}`][j].pro_name%></a></h5>
+                                        <div class="content_price">
+                                            <span class="price product-price">
+                                                <span style="color: orangered">Best Price:</span> <%-value%> VNĐ</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="right-block">
-                                    <h5 class="product-name"><a href="/detail/<%-hot[i]._id%>"><%-hot[i].pro_name%></a></h5>
-                                    <div class="content_price">
-                                        <span class="price product-price">
-                                            <span style="color: orangered">Best Price:</span> <%-value%> VNĐ</span>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            <%}%>
                         <%}%>
                     </ul>
                 </div>
@@ -267,7 +269,7 @@
                                     <%var value = drinks[i].price.toLocaleString(undefined,{ minimumFractionDigits: 0 });%>
                                     <li class="col-sm-4 product-item">
                                         <div class="left-block">
-                                            <a><img class="img-responsive" alt="product"
+                                            <a href="/details?is_pro=<%-drinks[i]._id%>"><img class="img-responsive" alt="product"
                                                              src="<%-drinks[i].image%>"/></a>
 
                                             <div class="quick-view">
@@ -282,7 +284,7 @@
                                             <div class="bestseller"></div>
                                         </div>
                                         <div class="right-block">
-                                            <h5 class="product-name"><a><%-drinks[i].pro_name%></a></h5>
+                                            <h5 class="product-name"><a href="/details?is_pro=<%-drinks[i]._id%>"><%-drinks[i].pro_name%></a></h5>
 
                                             <div class="content_price">
                                                 <span class="price product-price"><span style="color: black">Price:</span> <%-value%>đ</span>
@@ -323,7 +325,7 @@
                                     <%var value = seafood[i].price.toLocaleString(undefined,{ minimumFractionDigits: 0 });%>
                                     <li class="col-sm-4 product-item">
                                         <div class="left-block">
-                                            <a><img class="img-responsive" alt="product"
+                                            <a href="/details?is_pro=<%-seafood[i]._id%>"><img class="img-responsive" alt="product"
                                                              src="<%-seafood[i].image%>"/></a>
 
                                             <div class="quick-view">
@@ -338,7 +340,7 @@
                                             <div class="bestseller"></div>
                                         </div>
                                         <div class="right-block">
-                                            <h5 class="product-name"><a><%-seafood[i].pro_name%></a></h5>
+                                            <h5 class="product-name"><a href="/details?is_pro=<%-seafood[i]._id%>"><%-seafood[i].pro_name%></a></h5>
 
                                             <div class="content_price">
                                                 <span class="price product-price"><span style="color: black">Price:</span> <%-value%>đ</span>
